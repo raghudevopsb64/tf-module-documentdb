@@ -7,6 +7,7 @@ resource "aws_docdb_cluster" "main" {
   skip_final_snapshot             = var.SKIP_FINAL_SNAPSHOT
   db_cluster_parameter_group_name = aws_docdb_cluster_parameter_group.default.name
   db_subnet_group_name            = aws_docdb_subnet_group.main.name
+  vpc_security_group_ids          = [aws_security_group.main.id]
 }
 
 resource "aws_docdb_cluster_instance" "instane" {
