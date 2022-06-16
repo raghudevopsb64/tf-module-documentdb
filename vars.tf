@@ -10,3 +10,4 @@ variable "SKIP_FINAL_SNAPSHOT" {}
 variable "VPC_ID" {}
 variable "VPC_CIDR" {}
 variable "SUBNET_IDS" {}
+variable "WORKSTATION_IP" {}
