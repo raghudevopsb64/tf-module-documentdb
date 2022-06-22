@@ -1,4 +1,5 @@
 resource "null_resource" "schema" {
+  depends_on = [aws_docdb_cluster_instance.instane]
   provisioner "local-exec" {
     command = <<EOT
 curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip"
